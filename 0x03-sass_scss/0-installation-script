@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Step 1: Install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# Step 2: Close and reopen terminal or run this to load nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Step 3: Install Node.js (version 20.16.0)
+nvm install 20.16.0
+
+# Step 4: Install SASS
+npm install sass -v 3.7.4
